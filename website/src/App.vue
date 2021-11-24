@@ -18,8 +18,9 @@
       <div class="button">
         <button @click="size = 120">Set Size 120px</button>
         <button @click="size = 80">Set Size 80px</button>
-        <button @click="position = 'left'">Left</button>
-        <button @click="position = 'right'">Right</button>
+        <button @click="position = position === 'left' ? 'right' : 'left'">
+          {{ position === 'left' ? 'Right' : 'Left' }}
+        </button>
         <button @click="bottom = !bottom">{{ bottom ? 'Top' : 'Bottom' }}</button>
       </div>
       <div class="button">
