@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 module.exports = {
-  publicPath: '/vue-simple-package/',
+  publicPath: '/vue-github-corners/',
   configureWebpack: {
     resolve: {
       symlinks: false,
@@ -10,5 +10,8 @@ module.exports = {
         'vue-router': path.resolve(`./node_modules/vue-router`),
       },
     },
+  },
+  chainWebpack: (conf) => {
+    conf.module.rule('text').test(/\.md$/i).use('raw-loader').loader('raw-loader').end();
   },
 };
