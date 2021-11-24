@@ -1,6 +1,6 @@
 {
   "name": "@uivjs/vue-github-corners",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add a Github corner to your project page, This GitHub corner for Vue 3.0+ component.",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
