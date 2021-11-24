@@ -13,7 +13,7 @@
     />
     <header>
       <img alt="Vue logo" src="./assets/logo.png" />
-      <a href="https://github.com/ui-vue/vue-github-corners" target="__blank">Vue Github Corners</a>
+      <a href="https://github.com/uivjs/vue-github-corners" target="__blank">Vue Github Corners</a>
       <p>{{ description }}</p>
       <div class="button">
         <button @click="size = 120">Set Size 120px</button>
@@ -28,8 +28,9 @@
         <button @click="bgcolor = '#28a745'" style="background: #28a745">Green #28a745</button>
         <button @click="bgcolor = '#dc3545'" style="background: #dc3545">Red #dc3545</button>
         <button @click="bgcolor = '#008EF0'" style="background: #008ef0">Blue #008EF0</button>
-        <button @click="(color = '#151513'), (bgcolor = '#fff')">Light</button>
-        <button @click="(color = '#fff'), (bgcolor = '#151513')" style="background: #151513; color: #fff">Dark</button>
+        <button @click="changeTheme" :style="theme === 'dark' ? '' : 'background: #151513; color: #fff;'">
+          {{ theme === 'dark' ? 'Light' : 'Dark' }}
+        </button>
       </div>
     </header>
     <markdown-preview :source="markdown" class="markdown"></markdown-preview>
@@ -47,6 +48,7 @@ import './App.css';
 export default defineComponent({
   data() {
     return {
+      theme: 'dark',
       bgcolor: '#151513',
       color: '#fff',
       size: 80,
@@ -55,6 +57,18 @@ export default defineComponent({
       markdown: str,
       description: pkg.description,
     };
+  },
+  methods: {
+    changeTheme() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark';
+      if (this.theme === 'dark') {
+        this.color = '#fff';
+        this.bgcolor = '#151513';
+      } else {
+        this.color = '#151513';
+        this.bgcolor = '#fff';
+      }
+    },
   },
   components: {
     GithubCorners,
@@ -78,6 +92,7 @@ header {
 }
 header img {
   height: 20vmin;
+  margin-bottom: 23px;
 }
 header a {
   color: #09d3ac;
