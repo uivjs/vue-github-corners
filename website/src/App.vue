@@ -13,7 +13,7 @@
     />
     <header>
       <img alt="Vue logo" src="./assets/logo.png" />
-      <a href="https://github.com/ui-vue/vue-markdown-preview" target="__blank">Vue Github Corners</a>
+      <a href="https://github.com/ui-vue/vue-github-corners" target="__blank">Vue Github Corners</a>
       <p>{{ description }}</p>
       <div class="button">
         <button @click="size = 120">Set Size 120px</button>
