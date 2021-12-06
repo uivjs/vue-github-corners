@@ -19,10 +19,7 @@ npm i @uivjs/vue-github-corners
 ```vue
 <template>
   <div>
-    <github-corners
-      fixed
-      href="https://github.com/uivjs/vue-github-corners"
-    />
+    <github-corners fixed target="__blank" href="https://github.com/uivjs/vue-github-corners" />
   </div>
 </template>
 
