@@ -33,7 +33,9 @@
         </button>
       </div>
     </header>
-    <markdown-preview :source="markdown" class="markdown"></markdown-preview>
+    <markdown-preview class="markdown">
+      {{ markdown }}
+    </markdown-preview>
   </div>
 </template>
 <script>
@@ -44,6 +46,8 @@ import '@uivjs/vue-markdown-preview/markdown.css';
 import str from '@uivjs/vue-github-corners/README.md';
 import pkg from '@uivjs/vue-github-corners/package.json';
 import './App.css';
+
+console.log(str);
 
 export default defineComponent({
   data() {
