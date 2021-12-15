@@ -7,7 +7,7 @@ module.exports = {
       symlinks: false,
       alias: {
         vue: path.resolve(`./node_modules/vue`),
-        'vue-router': path.resolve(`./node_modules/vue-router`),
+        // 'vue-router': path.resolve(`./node_modules/vue-router`),
       },
     },
   },
