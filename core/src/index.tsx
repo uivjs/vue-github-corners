@@ -1,5 +1,6 @@
 import { defineComponent, h, PropType, ExtractPropTypes } from 'vue';
-import { StandardLonghandProperties, ZIndexProperty } from 'csstype';
+import { StandardLonghandProperties } from 'csstype';
+import './dist.css';
 
 export const gihubCorners = {
   /**
